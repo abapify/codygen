@@ -39,3 +39,7 @@ For cyclic dependencies we will use the following approach:
 ## Handling $ symbol
 
 - For schema columns which are named with $ symbol we will replace it with \_
+
+## Handling polymorphism
+
+In case of polymorphism ( `oneOf`, `allOf`, `anyOf` ) please construct a shared type which is a union of all possible types.
