@@ -8,9 +8,17 @@
 - call chat command
 - parse chat response and fetch file content from the response and store it to the drive
 
+## Prerequisites
+
+- Install Cody CLI, or preferably open in a devcontainer ( it's just enough to open in a Codespace )
+- Login to Cody CLI with your sourcegraph account
+
+
 ## Use cases
 
-### Petstore openAPI client generation
+### Petstore openAPI spec generation ( only descriptor )
+
+Here is how we generate this [spec](./src/petstore/zcl_petstore_v3.clas.abap) 
 
 - create [codygen-petstore.config.ts](./codygen-petstore.config.ts)
 ```typescript
@@ -41,8 +49,9 @@ export default config({
   - [src/openapi/zif_openapi_3_0.intf.abap](./src/openapi/zif_openapi_3_0.intf.abap) - previously generated Openapi interface to make AI aware of the interface which describes openapi spec type
   - [samples/zcl_petstore_v3.clas.abap](./samples/zcl_petstore_v3.clas.abap) - sample implementation. Sample is important beacuse AI follows a pattern from a sample
 
+- Run a command like `npx codygen --config codygen-petstore.config.ts`
 
-    
+
 
 
   
